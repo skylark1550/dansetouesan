@@ -1,0 +1,37 @@
+{
+  "name": "Holding",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User who owns the shares"
+    },
+    "company_id": {
+      "type": "string",
+      "description": "Company reference"
+    },
+    "ticker": {
+      "type": "string",
+      "description": "Stock ticker symbol"
+    },
+    "shares": {
+      "type": "number",
+      "description": "Number of shares owned"
+    },
+    "average_price": {
+      "type": "number",
+      "description": "Average purchase price per share"
+    },
+    "total_invested": {
+      "type": "number",
+      "description": "Total amount invested"
+    }
+  },
+  "required": [
+    "user_email",
+    "company_id",
+    "ticker",
+    "shares",
+    "average_price"
+  ]
+}
