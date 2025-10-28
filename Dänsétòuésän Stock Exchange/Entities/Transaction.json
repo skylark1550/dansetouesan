@@ -1,0 +1,47 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User who made the transaction"
+    },
+    "company_id": {
+      "type": "string",
+      "description": "Company reference"
+    },
+    "ticker": {
+      "type": "string",
+      "description": "Stock ticker"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "buy",
+        "sell"
+      ],
+      "description": "Transaction type"
+    },
+    "shares": {
+      "type": "number",
+      "description": "Number of shares"
+    },
+    "price_per_share": {
+      "type": "number",
+      "description": "Price per share at transaction"
+    },
+    "total_amount": {
+      "type": "number",
+      "description": "Total transaction amount"
+    }
+  },
+  "required": [
+    "user_email",
+    "company_id",
+    "ticker",
+    "type",
+    "shares",
+    "price_per_share",
+    "total_amount"
+  ]
+}
