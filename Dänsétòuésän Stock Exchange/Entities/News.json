@@ -1,0 +1,45 @@
+{
+  "name": "News",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "News headline"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full news content"
+    },
+    "company_id": {
+      "type": "string",
+      "description": "ID of the affected company"
+    },
+    "ticker": {
+      "type": "string",
+      "description": "Stock ticker of affected company"
+    },
+    "impact": {
+      "type": "string",
+      "enum": [
+        "very_positive",
+        "positive",
+        "neutral",
+        "negative",
+        "very_negative"
+      ],
+      "description": "Impact level on stock price"
+    },
+    "impact_applied": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the price impact has been applied"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "company_id",
+    "ticker",
+    "impact"
+  ]
+}
