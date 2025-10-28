@@ -1,0 +1,32 @@
+{
+  "name": "MarketSchedule",
+  "type": "object",
+  "properties": {
+    "open_time": {
+      "type": "string",
+      "default": "20:00",
+      "description": "Market opening time in UTC (HH:MM format)"
+    },
+    "close_time": {
+      "type": "string",
+      "default": "08:00",
+      "description": "Market closing time in UTC (HH:MM format)"
+    },
+    "lunch_break_start": {
+      "type": "string",
+      "default": "00:00",
+      "description": "Lunch break start time in UTC (HH:MM format)"
+    },
+    "lunch_break_end": {
+      "type": "string",
+      "default": "01:00",
+      "description": "Lunch break end time in UTC (HH:MM format)"
+    },
+    "auto_schedule_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether automatic scheduling is enabled"
+    }
+  },
+  "required": []
+}
