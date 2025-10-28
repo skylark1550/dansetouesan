@@ -1,0 +1,16 @@
+{
+  "name": "MarketStatus",
+  "type": "object",
+  "properties": {
+    "is_open": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the market is open for trading"
+    },
+    "message": {
+      "type": "string",
+      "description": "Status message to display to traders"
+    }
+  },
+  "required": []
+}
