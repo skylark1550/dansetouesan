@@ -1,0 +1,76 @@
+{
+  "name": "Company",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "ticker": {
+      "type": "string",
+      "description": "Stock ticker symbol (e.g., DNST)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Company description"
+    },
+    "sector": {
+      "type": "string",
+      "enum": [
+        "Technology",
+        "Finance",
+        "Healthcare",
+        "Energy",
+        "Consumer Goods",
+        "Entertainment",
+        "Real Estate",
+        "Manufacturing",
+        "Other"
+      ],
+      "description": "Industry sector"
+    },
+    "initial_price": {
+      "type": "number",
+      "description": "Initial share price"
+    },
+    "current_price": {
+      "type": "number",
+      "description": "Current share price"
+    },
+    "total_shares": {
+      "type": "number",
+      "description": "Total shares available"
+    },
+    "available_shares": {
+      "type": "number",
+      "description": "Shares available for trading"
+    },
+    "market_volatility": {
+      "type": "number",
+      "default": 2.5,
+      "description": "Market volatility percentage for this company"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending",
+      "description": "Approval status"
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "Company logo URL"
+    }
+  },
+  "required": [
+    "name",
+    "ticker",
+    "description",
+    "sector",
+    "initial_price",
+    "total_shares"
+  ]
+}
