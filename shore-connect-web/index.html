@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shore Connect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>Shore Connect</h1>
+
+  <div class="search-card">
+    <div class="mode-toggle">
+      <button id="stationMode" class="active">Station → Station</button>
+      <button id="trainMode">Train Number</button>
+    </div>
+
+    <!-- Station search -->
+    <div id="stationSearch">
+      <select id="fromStation"></select>
+      <select id="toStation"></select>
+
+      <input type="time" id="departureTime">
+      <select id="trainTypeFilter">
+        <option value="">All train types</option>
+        <option value="LIMITED_EXPRESS">Limited Express</option>
+        <option value="EXPRESS">Express</option>
+        <option value="LIMITED_LOCAL">Limited Local</option>
+        <option value="LOCAL">Local</option>
+      </select>
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Train search -->
+    <div id="trainSearch" class="hidden">
+      <input type="text" id="trainIdInput" placeholder="Train ID">
+      <button id="trainSearchBtn">Search</button>
+    </div>
+  </div>
+
+  <div id="loading" class="hidden"></div>
+  <div id="results"></div>
+
+  <div id="timetablePanel" class="timetable-panel hidden"></div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
