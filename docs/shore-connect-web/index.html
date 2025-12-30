@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shore Connect – Passenger Information System</title>
+
+  <!-- Alata font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">Shore Connect</div>
+    <div class="subtitle">Passenger Timetable & Journey Planner</div>
+  </div>
+</header>
+
+<main class="app">
+
+  <section class="search-panel">
+    <div class="mode-toggle">
+      <button id="stationMode" class="active">Station to Station</button>
+      <button id="trainMode">Train Number</button>
+    </div>
+
+    <!-- Station search -->
+    <div id="stationSearch" class="search-form">
+      <div class="form-row">
+        <label>From</label>
+        <select id="fromStation"></select>
+      </div>
+
+      <div class="form-row">
+        <label>To</label>
+        <select id="toStation"></select>
+      </div>
+
+      <div class="form-row">
+        <label>Departure after</label>
+        <input type="time" id="departureTime">
+      </div>
+
+      <div class="form-row">
+        <label>Departure before</label>
+        <input type="time" id="departureBefore">
+      </div>
+
+      <div class="form-row">
+        <label>Train type</label>
+        <select id="trainTypeFilter">
+          <option value="">All services</option>
+          <option value="LTD_EXPRESS">Limited Express</option>
+          <option value="EXPRESS">Express</option>
+          <option value="LTD_LOCAL">Limited Local</option>
+          <option value="LOCAL">Local</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>
+          <input type="checkbox" id="directOnly">
+          Direct trains only
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button id="searchBtn" class="primary">Search services</button>
+      </div>
+    </div>
+
+    <!-- Train search -->
+    <div id="trainSearch" class="search-form hidden">
+      <div class="form-row wide">
+        <label>Train number</label>
+        <input type="text" id="trainIdInput" placeholder="e.g. S4205">
+      </div>
+
+      <div class="form-actions">
+        <button id="trainSearchBtn" class="primary">View timetable</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="loading" class="loading hidden">
+    Searching timetable…
+  </section>
+
+  <section id="results" class="results"></section>
+
+  <section id="timetablePanel" class="timetable-panel hidden"></section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
